@@ -1,2 +1,2 @@
 # Snips-Taschenrechner
-Das ist ein Taschenrechner-Skill für Snips.
+Das ist ein Rechner-Skill für Snips.ai
