@@ -40,10 +40,13 @@ def action_wrapper(hermes, intentMessage, conf):
     """ 
     first = int(intentMessage.slots.firstTerm.first().value)
     second = int(intentMessage.slots.secondTerm.first().value)
-    calc = first / second
-    if str(calc)[-2:] == ".0":
-        calc = int(calc)
-    result_sentence = "Der Term {} geteilt durch {} ergibt {} .".format(first, second, calc)
+    if second != 0:
+        calc = first / second
+        if str(calc)[-2:] == ".0":
+            calc = int(calc)
+        result_sentence = "Der Term {} geteilt durch {} ergibt {} .".format(first, second, calc)
+    else:
+        result_sentence = "Ich kann leider nicht durch Null teilen."
 
     current_session_id = intentMessage.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
