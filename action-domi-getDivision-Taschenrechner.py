@@ -44,7 +44,7 @@ def action_wrapper(hermes, intentMessage, conf):
         calc = first / second
         if str(calc)[-2:] == ".0":
             calc = int(calc)
-        result_sentence = "Der Term {} geteilt durch {} ergibt {} .".format(first, second, calc)
+        result_sentence = "{} geteilt durch {} ergibt {} .".format(first, second, calc)
     else:
         result_sentence = "Ich kann leider nicht durch Null teilen."
 

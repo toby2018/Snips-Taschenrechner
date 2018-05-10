@@ -42,7 +42,7 @@ def action_wrapper(hermes, intentMessage, conf):
     calc = math.sqrt(first)
     if str(calc)[-2:] == ".0":
         calc = int(calc)
-    result_sentence = "Der Term Wurzel {} ergibt {} .".format(first, calc)
+    result_sentence = "Die Wurzel von {} ist {} .".format(first, calc)
     current_session_id = intentMessage.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
 
