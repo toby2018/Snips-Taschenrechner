@@ -28,4 +28,4 @@ def action_wrapper(hermes, intent_message):
 
 if __name__ == "__main__":
     with Hermes("localhost:1883") as h:
-        h.subscribe_intent("domi:getZufall", action_wrapper).start()
+        h.subscribe_intent("toby2018:getZufall", action_wrapper).start()
