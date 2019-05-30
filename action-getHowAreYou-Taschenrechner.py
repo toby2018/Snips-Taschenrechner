@@ -5,11 +5,11 @@
 from hermes_python.hermes import Hermes
 import random
 
-responses = ['hat heute sehr gute laune',
-             'ist heute gut drauf',
-             'will fliegen heute',
-             'is ganz schön rollig',
-             'ist geladen wie eine knallerbse']
+responses = [' hat heute sehr gute laune',
+             ' ist heute gut drauf',
+             ' will fliegen heute',
+             ' is ganz schön rollig',
+             ' ist geladen wie eine knallerbse']
 
 unavailable = ['diese person ist als geheim eingestuft',
                'hier ist was schief gelaufen',
@@ -17,7 +17,12 @@ unavailable = ['diese person ist als geheim eingestuft',
 
 
 def action_wrapper(hermes, intent_message):
-    result_sentence = "watt datt watt"
+    item = intent_message.slots.item_random.first().value
+
+    if item == 'Sabine' or item == 'Steffen':
+        result_sentence = item + random.choice(responses)
+    else:
+        result_sentence = random.choice(unavailable)
 
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
