@@ -7,29 +7,18 @@ import random
 
 responses = ['hat heute sehr gute laune',
              'ist heute gut drauf',
+             'will fliegen heute',
+             'is ganz schön rollig',
              'ist geladen wie eine knallerbse']
 
 unavailable = ['diese person ist als geheim eingestuft',
+               'hier ist was schief gelaufen',
                'kein kommentar']
 
 
 def action_wrapper(hermes, intent_message):
-    item = intent_message.slots.item_random.first().value
-    if item == 'coin' or item == 'kopf ' or item == 'münze ':
-        coin_random = random.randrange(0, 1)
-        if coin_random == 0:
-            result_sentence = "Es ist ein Kopf."
-        else:
-            result_sentence = "Es ist eine Zahl."
-    elif item == 'dice' or item == 'würfel ':
-        dice_random = random.randrange(1, 6)
-        result_sentence = "Ich habe eine {number} gewürfelt.".format(number=dice_random)
-    elif item == 'number' or item == 'zahl ':
-        number_random = random.randrange(0, 1000)
-        result_sentence = "Die {number} habe ich gerade zufällig gewählt.".format(number=number_random)
-    # TODO: random number from range
-    else:
-        result_sentence = "Diese Person ist als streng geheim eingestuft."
+    result_sentence = "watt datt watt"
+
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
 
