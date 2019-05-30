@@ -21,7 +21,8 @@ def action_wrapper(hermes, intent_message):
     item = 'Sabine'
 
     if item == 'Sabine' or item == 'Steffen':
-        result_sentence = item + random.choice(responses)
+        # result_sentence = item + random.choice(responses)
+        result_sentence = 'watt dat watt?'
     else:
         result_sentence = random.choice(unavailable)
 
