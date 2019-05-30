@@ -17,7 +17,8 @@ unavailable = ['diese person ist als geheim eingestuft',
 
 
 def action_wrapper(hermes, intent_message):
-    item = intent_message.slots.item_random.first().value
+    # item = intent_message.slots.item_random.first().value
+    item = 'Sabine'
 
     if item == 'Sabine' or item == 'Steffen':
         result_sentence = item + random.choice(responses)
