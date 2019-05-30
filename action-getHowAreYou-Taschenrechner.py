@@ -20,11 +20,11 @@ def action_wrapper(hermes, intent_message):
     item = intent_message.slots.family_member.first().value
 
     if item == 'Sabine' or item == 'Steffen':
-        # result_sentence = item + random.choice(responses)
-        result_sentence = 'watt dat watt?'
+        result_sentence = item + random.choice(responses)
+        # result_sentence = 'watt dat watt?'
     else:
-        # result_sentence = random.choice(unavailable)
-        result_sentence = 'keiner will die else'
+        result_sentence = random.choice(unavailable)
+        # result_sentence = 'keiner will die else'
 
     current_session_id = intent_message.session_id
     hermes.publish_end_session(current_session_id, result_sentence)
