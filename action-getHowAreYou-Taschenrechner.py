@@ -10,6 +10,7 @@ responses = [' hat heute sehr gute laune',
              ' will fliegen heute',
              ' is ganz schön rollig',
              ' ist geladen wie eine knallerbse',
+			 ' braucht urlaub!',
 			 ' will heute raus hier!']
 
 unavailable = ['diese person ist als geheim eingestuft',
