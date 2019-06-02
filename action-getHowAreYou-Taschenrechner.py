@@ -3,7 +3,7 @@
 
 
 from hermes_python.hermes import Hermes
-from matrix_lite import led
+# from matrix_lite import led
 import random
 
 responses = [' hat heute sehr gute laune',
@@ -21,7 +21,7 @@ unavailable = ['diese person ist als geheim eingestuft',
 
 def action_wrapper(hermes, intent_message):
     # Sets each LED to blue
-    led.set('blue')  # color name
+    # led.set('blue')  # color name
 
     item = intent_message.slots.family_member.first().value
 
