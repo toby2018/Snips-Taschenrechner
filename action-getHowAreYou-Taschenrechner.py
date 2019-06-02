@@ -21,7 +21,7 @@ unavailable = ['diese person ist als geheim eingestuft',
 
 def action_wrapper(hermes, intent_message):
     # Sets each LED to blue
-    led.set('blue')  # color name
+    # led.set('blue')  # color name
 
     item = intent_message.slots.family_member.first().value
 
