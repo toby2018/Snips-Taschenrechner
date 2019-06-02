@@ -36,7 +36,7 @@ def action_wrapper(hermes, intent_message):
     hermes.publish_end_session(current_session_id, result_sentence)
 
     # Turns off each LED
-    led.set('black')  # color name
+    # led.set('black')  # color name
 
 
 if __name__ == "__main__":
