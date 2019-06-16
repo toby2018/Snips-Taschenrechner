@@ -14,9 +14,7 @@ responses = [' hat heute sehr gute laune',
              ' braucht urlaub!',
              ' will heute raus hier!']
 
-unavailable = ['diese person ist als geheim eingestuft',
-               'hier ist was schief gelaufen',
-               'kein kommentar']
+unavailable = ['keine drachen wird heute alle gegner in den grund rammen']
 
 
 def action_wrapper(hermes, intent_message):
